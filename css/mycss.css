@@ -1,0 +1,264 @@
+body { width: 990px;
+       vertical-align: middle;
+       /*background-color: #660000;*/
+       margin: 10px 5px; 
+       /*border: 2px solid black;
+       /*font-family: 'lucida console'; 
+       /*background-color: #000000;
+       /*background-image: URL('../images/forest_29.jpg');*/
+     }
+body.form {
+            width: 990px;
+            height: 615px;
+            vertical-align: middle;
+            background-color: black;
+            margin: 10px 5px;
+          }
+header { border: 1px solid #000000;
+         border-radius: 25px;
+         background-color: #E0E0E0;
+         width : 976px;
+         margin: 0px 0px 20px;
+         line-height: 100px;
+         vertical-align: middle;
+         text-align: center;
+         font-size: 60px;
+         /*background-color: #999933;*/
+         /*color: rgb(192,192,192);
+         /*font-weight: bold;*/ 
+       }
+
+header.formheader{ width: 90%;
+                   line-height: 60px; 
+                   font-size: 60px; 
+                   margin-left: auto;
+                   margin-right: auto;
+                   margin-top: 3px; 
+                   margin-bottom: 3px;
+                   font-family: 'Brush Script Mt';
+                   background-color: #FFFFFF;
+                   color: #000000;
+                   border: 5px outset #000000;
+                 }
+nav    { border: 1px solid #000000;
+         background-color: #E0E0E0;
+         width: 976px;
+         margin: 0px 0px 6px;
+         line-height: 30px;
+         text-align: center;
+         vertical-align: middle;
+         font-size: 16px;
+         color: #000000;
+         font-weight: bold;
+         border-radius: 10px;
+       }
+a { margin: 0px 20px; }
+a.formanchor { color: #666633;}
+a.formanchor:hover { color: #990000; }
+
+img { height: 150px;
+      width: 150px;
+    }
+
+section   { border: 1px solid #000000; /*A container for everything*/
+            border-radius: 25px;
+            width: 976px;
+            margin: 0px 0px 20px;
+          }
+
+table.main     { width: 956px; 
+                 margin: 10px;
+               }
+
+table.ArticleTable {
+                     width: 725px;
+                     text-align: center;
+                     vertical-align: middle;
+                     display: block;
+                     margin-left: auto;
+                     margin-right: auto;
+                   }
+table.formtable {
+                  font-family: 'Brush Script MT';
+                  font-size: 22px;
+                  font-weight: lighter;
+                  border: 1px solid black;
+                  border-radius: 25px;
+                  width: 980px;
+                  height: 600px;
+                  background-image: url('../images/pizza1.jpg');
+                  vertical-align: middle;
+                  background-color: #660000;
+                }
+table.forminnertable {
+        width: 95%;
+        background-color: #990000;
+        margin: auto;
+        border-radius: 10px;
+      }
+table.price { width: 95%;
+              background-color: #CCCC00;
+              border: 6px solid #000000;
+              color: #000000;
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto; 
+            }
+table.personal {
+                 width: 95%;
+                 margin: auto;
+                 background-color: #990000;
+                 border-radius: 10px;
+               }
+table.placeordertable{ width: 95%;
+                       margin-left: auto;
+                       margin-right: auto;
+                       border-top-left-radius: 10px;
+                     }
+table.errorTable { width:95%;
+                   margin-left: auto;
+                   margin-right: auto;
+                   text-align: left;
+                   font-family: 'Sans Serif';
+                   font-size: 11px;
+                 } 
+article  { 
+           text-align: left;
+           vertical-align: middle;
+           border: 1px solid #000000;
+           padding: 10px;
+         }/*holds the main body of text*/
+
+aside { border: 1px solid #000000;
+        width: 147px;
+        text-align: center;
+        height: 400px;
+        padding: 10px;
+      } 
+td.pricetd { padding: 1px;
+             font-size: 16px;
+             border: 2px solid #000000;
+           } 
+td.maintd {
+            width: 765px; 
+            text-align: left;
+            vertical-align: middle;
+            padding: 10px;
+          } 
+td.asidetd{
+            width: 191px;
+            padding: 10px;
+          }
+
+td.ArtTD { 
+             width: 725px;
+             text-align: center;
+             vertical-align: middle;
+             padding: 10px;
+           }
+td.formtd {
+            width: 25%;
+            text-align: center;
+          }
+td.topbottom { height: 50px; 
+               text-align: center;
+             }
+td.toppings { line-height: 30px;
+             text-align: left;
+              padding: 2px;
+            }
+td.infotd {
+            color: #000000;
+            text-align: left; 
+            padding: 5px 5px;
+          }
+td.submittd{
+             padding: 5px;
+           }
+td.errorType{
+              padding: 3px 5px;
+              background-color: #990000;
+              color: #FFFFFF;
+            }
+footer { border: 1px solid #000000; 
+         width: 976px;
+         margin: 0px 0px;
+         text-align: center; 
+       }
+h1{ font-size: 48px;
+    font-weight: bold;
+    margin: 20px;
+   }
+h2 { font-size: 24px;
+     font-weight: bold;
+     margin: 20px;
+   }
+h3 { font-size: 18px;
+     font-weight: bold;
+   }
+hr{ width: 75%;
+    border: solid 1px #000000;
+    color: #000000;
+    background-color: #000000;
+    height: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+  }
+td.tableheading { background-color: #000000;
+                  color: #E0E0E0;
+                  text-align: center;
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                }
+select{ width: 100px;
+         margin: 5px 0px 0px 30px;}
+span.formspan { background-color: #000000;
+                color: #E0E0E0;
+                padding: 5px
+              }
+input { background-color: #E0E0E0;
+        border: 2px solid #000000; 
+        border-radius: 5px;}
+textarea { background-color: #E0E0E0; 
+           border: 4px solid #000000;
+           font-family: 'Sans Serif';
+           font-size: 14px;
+           border-radius: 10px;
+         }
+ 
+input.buttons { border-radius: 10px;
+                background-color: #000000;
+                border: 4px outset #000000;
+                color: #E0E0E0;
+                font-family: 'Brush Script MT';
+                font-size: 22px;
+                width: 200px;
+                height: 40px;
+              }
+input.total { height: 30px;
+              width: 150px;
+              background-color: #FFFFFF;
+            }
+div.errorlist {  width: 95%;
+                 height: 325px;
+                 background-color: #000000;
+                 font-family: 'Brush Script MT';
+                 color: #E0E0E0;
+                 border: 2px inset #000000;
+              }
+textarea:hover { background-color: #FFFFFF; }
+input:hover { background-color: #FFFFFF; }
+input.buttons:hover { border-color: #C0C0C0;
+                      background-color: #000000; }
+footer.formfooter { 
+                    width: 976px;
+                    line-height: 30px;
+                    text-align: center;
+                    vertical-align: middle;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    color: #E0E0E0;
+                    background-color: #000000;
+                  }
+

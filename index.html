@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kemp</title>
+    <link rel='stylesheet' href='css/reset.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='css/mycss.css' type='text/css' media='screen'/>
+    <script src='js/myscript.js'></script>
+  </head>
+<body class='form'>
+  <form method='post' name='onlineOrder' id='onlineOrder' action='https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/pizza.cgi' onsubmit='return validateOrder();'>
+    <table class='formtable'>
+      <tr>
+        <td class='topbottom' colspan='2'>
+          <header class='formheader'>Momma's Pizza</header>
+        </td>
+        <td class='formtd'>
+          <table>
+            <tr>
+              <td class='toppings'>
+                <span class='formspan'>(416) or (905) 222-6262</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class='formtd' rowspan='2'>
+          <table class='price'>
+            <tr>
+              <td class='pricetd'>Small</td>
+              <td class='pricetd'>$11.55</td>
+            </tr>
+            <tr>
+              <td class='pricetd'>Medium</td>
+              <td class='pricetd'>$15.25</td>
+            </tr>
+            <tr>
+              <td class='pricetd'>Large</td>
+              <td class='pricetd'>$22.00</td>
+            </tr>
+            <tr>
+              <td class='pricetd'>X-Large</td>
+              <td class='pricetd'>$25.00</td>
+            </tr>
+            <tr>
+              <td class='pricetd'>Toppings</td>
+              <td class='pricetd'>$1.79 Each</td>
+            </tr>
+            <tr>
+              <td class='pricetd'>13% GST</td>
+              <td class='pricetd'>Free Delivery</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class='infotd' colspan='3'>
+          <table class='personal'> 
+            <tr>
+              <td class='tableheading' colspan='2'>Personal Info:</td>
+            </tr>
+            <tr>
+              <td class='toppings'>
+                Name:<input type='text' name='surname' id='surname' size='15'/>
+              </td>
+              <td class='toppings'>
+                Phone#&nbsp; <input type='text' name='phone' id='phone' size='14'/>
+              </td>
+             </tr>
+             <tr>
+              <td class='toppings'>
+                Account#: <input type='text' name='client' id='client' size='10'/>
+              </td>
+              <td class='toppings'>
+                Birth Date: <input type='text' name='dob' id='dob' size='10'/>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class='formtd' rowspan='2'>
+          <table class='forminnertable'>
+            <tr>
+              <td class='tableheading' colspan='2'>Toppings</td>
+            </tr>
+            <tr>
+              <td class='toppings'>
+                <input type='checkbox' name='toppings' id='t01' value='Anchovies' onclick='calculatePizzaPrice();'/>Anchovies<br/>
+                <input type='checkbox' name='toppings' id='t02' value='Bacon' onclick='calculatePizzaPrice();'/>Bacon<br/>
+                <input type='checkbox' name='toppings' id='t03' value='Ham' onclick='calculatePizzaPrice();'/>Ham<br/>
+                <input type='checkbox' name='toppings' id='t04' value='Pepperoni' onclick='calculatePizzaPrice();'/>Pepperoni<br/>
+                <input type='checkbox' name='toppings' id='t05' value='Salami' onclick='calculatePizzaPrice();'/>Salami<br/>
+                <input type='checkbox' name='toppings' id='t06' value='Sausage' onclick='calculatePizzaPrice();'/>Sausage<br/>
+              </td>
+              <td class='toppings'>
+                <input type='checkbox' name='toppings' id='t07' value='Broccoli' onclick='calculatePizzaPrice();'/>Broccoli<br/>
+                <input type='checkbox' name='toppings' id='t08' value='Green Olives' onclick='calculatePizzaPrice();'/>Green Olives<br/>
+                <input type='checkbox' name='toppings' id='t09' value='Green Pepper' onclick='calculatePizzaPrice();'/>Green Peppers<br/>
+                <input type='checkbox' name='toppings' id='t10' value='Mushrooms' onclick='calculatePizzaPrice();'/>Mushrooms<br/>
+                <input type='checkbox' name='toppings' id='t11' value='Red Onions' onclick='calculatePizzaPrice();'/>Red Onions<br/>
+                <input type='checkbox' name='toppings' id='t12' value='Roasted Garlic' onclick='calculatePizzaPrice();'/>Roasted Garlic<br/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class='formtd'>
+          <table class='forminnertable'>
+            <tr>  
+              <td class='tableheading'>Cheese</td>
+            </tr>
+            <tr>
+              <td class='toppings'>
+                <input type='radio' name='cheese' id='c01' value='Mozzarella'/>Mozzarella<br/>
+                <input type='radio' name='cheese' id='c02' value='Reduced Fat'/>Reduced Fat<br/>
+                <input type='radio' name='cheese' id='c03' value='Feta'/>Feta
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class='formtd'>
+          <table class='forminnertable'>
+            <tr>
+              <td class='tableheading'>Size</td>
+            </tr>
+            <tr>
+              <td class='toppings'>
+                <select name='pizzaSize' id='pizzaSize' size='2' onchange='calculatePizzaPrice();'>
+                  <option value=''>Select Pizza Size</option>
+                  <option value='Small'>Small</option>
+                  <option value='Medium'>Medium</option>
+                  <option value='Large'>Large</option>
+                  <option value='X-Large'>X-Large</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class='formtd'  rowspan='3'>
+          <div class='errorlist' id='errors'>Errors Go Here</div>
+        </td>
+      </tr>
+      <tr>
+        <td class='formtd'>
+          <table class='forminnertable'>
+            <tr>
+              <td class='tableheading'>Sauce</td>
+            </tr>
+            <tr>  
+              <td class='toppings'>
+                <input type='radio' name='sauce' id='s01' value='Pizza Sauce'/>Pizza Sauce<br/>
+                <input type='radio' name='sauce' id='s02' value='BBQ Sauce'/>BBQ Sauce<br/>
+                <input type='radio' name='sauce' id='s03' value='Garlic Sauce'/>Garlic Sauce<br/> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class='formtd'>
+          <table class='forminnertable'>
+            <tr>  
+              <td class='tableheading'>Crust</td>
+            </tr>
+            <tr>
+              <td class='toppings'>
+                <select name='pizzaCrust' id='pizzaCrust' size='2'>
+                  <option value='Regular Crust'>Regular Crust</option>
+                  <option value='Thin Crust'>Thin Crust</option>
+                  <option value='Thick Crust'>Thick Crust</option>
+                  <option value='Whole Wheat Crust'>Whole Wheat Crust</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class='formtd' colspan='3'>
+          <textarea name='note' id='note' rows='2' cols='80'>Special Instructions</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class='topbottom' colspan='3'>
+          <table class='placeordertable'>
+           <tr>
+             <td class='submittd'>
+               <input type='submit' class='buttons' value='Place Your Order'/> <input type='reset' class='buttons' value='Start Over'/>
+             </td>
+           </tr>
+         </table>
+        </td>
+        <td>
+          <table class='placeordertable'>
+            <tr>
+              <td class='submittd'>
+                Total:
+              </td>
+              <td class='submittd'>
+                <input class='total' type='text' name='price' id='price' readonly='readonly' maxlength='8' />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  <input name='hPizzaPrice' value='0' type='hidden'/>
+  <input name='hToppings' value='0' type='hidden'/>
+  <input name='hToppingsCost' value='0' type='hidden'/>
+  <input name='hSubTotal' value='0' type='hidden'/>
+  <input name='hHst' value='0' type='hidden'/>
+  <input name='hFinalTotal' value='0' type='hidden'/>
+  <input name='hJsActive' value='N' type='hidden'/>
+  <input name='hLogin' value='int222_131b07' type='hidden'/>
+  <input name='hName' value='Kemp' type='hidden'/>
+  <footer class='formfooter'><a class='formanchor' href='..'>Zenit Account</a> <a class='formanchor' href='honesty.html'>Honesty</a>
+    <script type="text/javascript">
+       //<![CDATA[
+       var dt=new Date(document.lastModified);   // Get document last modified date
+       document.write('This page was last updated on '+dt.toLocaleString());
+        //]]>    
+    </script>
+    <a class='formanchor' href='css/mycss.css'>CSS</a> <a class='formanchor' href='js'>JavaScript</a>
+  </footer>
+  </form>
+</body>
+</html>
+
